@@ -211,7 +211,7 @@ public class MySQLInsertOnDuplicateUpdateExecutor extends MySQLInsertExecutor im
 
 
     @Override
-    protected TableRecords afterImage(TableRecords beforeImage) throws SQLException {
+    public TableRecords afterImage(TableRecords beforeImage) throws SQLException {
         TableMeta tableMeta = getTableMeta();
 
         List<Row> rows = beforeImage.getRows();
